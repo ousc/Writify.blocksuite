@@ -618,7 +618,7 @@ export class DebugMenu extends ShadowlessElement {
           <!-- undo/redo group -->
           <sl-button-group label="History">
             <!-- undo -->
-            <sl-tooltip content="Undo" placement="bottom" hoist>
+            <sl-tooltip content="撤销" placement="bottom" hoist>
               <sl-button
                 size="small"
                 .disabled="${!this._canUndo}"
@@ -628,7 +628,7 @@ export class DebugMenu extends ShadowlessElement {
               </sl-button>
             </sl-tooltip>
             <!-- redo -->
-            <sl-tooltip content="Redo" placement="bottom" hoist>
+            <sl-tooltip content="重做" placement="bottom" hoist>
               <sl-button
                 size="small"
                 .disabled="${!this._canRedo}"
@@ -642,41 +642,41 @@ export class DebugMenu extends ShadowlessElement {
           <!-- test operations -->
           <sl-dropdown id="test-operations-dropdown" placement="bottom" hoist>
             <sl-button size="small" slot="trigger" caret>
-              Test Operations
+              测试操作
             </sl-button>
             <sl-menu>
               <sl-menu-item @click="${this._exportMarkDown}">
-                Export Markdown
+                导出为Markdown
               </sl-menu-item>
               <sl-menu-item @click="${this._exportHtml}">
-                Export HTML
+                导出为HTML
               </sl-menu-item>
               <sl-menu-item @click="${this._exportPdf}">
-                Export PDF
+                导出为PDF
               </sl-menu-item>
               <sl-menu-item @click="${this._exportPng}">
-                Export PNG
+                导出为PNG
               </sl-menu-item>
               <sl-menu-item @click="${this._exportSnapshot}">
-                Export Snapshot
+                导出为快照
               </sl-menu-item>
               <sl-menu-item @click="${this._importSnapshot}">
-                Import Snapshot
+                导入快照
               </sl-menu-item>
               <sl-menu-item @click="${this._shareUrl}">
-                Share URL
+                分享链接
               </sl-menu-item>
               <sl-menu-item @click="${this._toggleStyleDebugMenu}">
-                Toggle CSS Debug Menu
+                切换 CSS 调试菜单
               </sl-menu-item>
               <sl-menu-item @click="${this._toggleReadonly}">
-                Toggle Readonly
+                切换只读状态
               </sl-menu-item>
               <sl-menu-item @click="${this._shareSelection}">
-                Share Selection
+                分享选中内容
               </sl-menu-item>
               <sl-menu-item @click="${this._switchOffsetMode}">
-                Switch Offset Mode
+                切换边距模式
               </sl-menu-item>
               <sl-menu-item @click="${this._toggleOutlinePanel}">
                 Toggle Outline Panel

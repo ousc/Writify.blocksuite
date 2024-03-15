@@ -58,7 +58,7 @@ import {
 
 export const menuGroups: SlashMenuOptions['menus'] = [
   {
-    name: 'Text',
+    name: '文字',
     items: textConversionConfigs
       .filter(i => i.flavour !== 'affine:list')
       .map<Omit<SlashItem, 'groupName'>>(({ name, icon, flavour, type }) => ({
@@ -110,7 +110,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
       })),
   },
   {
-    name: 'Style',
+    name: '样式',
     items: textFormatConfigs
       .filter(i => !['Link', 'Code'].includes(i.name))
       .map(({ name, icon, id }) => ({
@@ -128,7 +128,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
             );
             assertExists(
               inlineEditor,
-              "Can't set style mark! Inline editor not found"
+              "无法设置样式标记！ 未找到内联编辑器"
             );
             inlineEditor.setMarks({
               [id]: true,
@@ -143,7 +143,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
       })),
   },
   {
-    name: 'List',
+    name: '列表',
     items: textConversionConfigs
       .filter(i => i.flavour === 'affine:list')
       .map(({ name, icon, flavour, type }) => ({
@@ -168,10 +168,10 @@ export const menuGroups: SlashMenuOptions['menus'] = [
   },
 
   {
-    name: 'Docs',
+    name: '文档',
     items: [
       {
-        name: 'New Doc',
+        name: '新文档',
         icon: NewDocIcon,
         action: ({ rootElement, model }) => {
           const newDoc = createDefaultDoc(rootElement.doc.collection);
@@ -184,7 +184,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       {
-        name: 'Link Doc',
+        name: '链接文档',
         alias: ['dual link'],
         icon: DualLinkIcon,
         showWhen: (_, rootElement) => {
@@ -217,10 +217,10 @@ export const menuGroups: SlashMenuOptions['menus'] = [
     ],
   },
   {
-    name: 'Content & Media',
+    name: '媒体内容',
     items: [
       {
-        name: 'Image',
+        name: '图片',
         icon: ImageIcon20,
         showWhen: model => {
           if (!model.doc.schema.flavourSchemaMap.has('affine:image')) {
@@ -252,7 +252,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       {
-        name: 'Links',
+        name: '超链接',
         icon: BookmarkIcon,
         showWhen: model => {
           if (!model.doc.schema.flavourSchemaMap.has('affine:bookmark')) {
@@ -268,15 +268,15 @@ export const menuGroups: SlashMenuOptions['menus'] = [
           const index = parentModel.children.indexOf(model) + 1;
           await toggleEmbedCardCreateModal(
             rootElement.host,
-            'Links',
-            'The added link will be displayed as a card view.',
+            '链接',
+            '添加的链接将显示为卡片视图。',
             { mode: 'page', parentModel, index }
           );
           tryRemoveEmptyLine(model);
         },
       },
       {
-        name: 'File',
+        name: '附件',
         icon: AttachmentIcon,
         alias: ['attachment'],
         showWhen: model => {
@@ -320,7 +320,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
           await toggleEmbedCardCreateModal(
             rootElement.host,
             'YouTube',
-            'The added YouTube video link will be displayed as an embed view.',
+            '添加的 YouTube 视频链接将显示为嵌入视图。',
             { mode: 'page', parentModel, index }
           );
           tryRemoveEmptyLine(model);
@@ -344,7 +344,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
           await toggleEmbedCardCreateModal(
             rootElement.host,
             'Figma',
-            'The added Figma link will be displayed as an embed view.',
+            '添加的 Figma 链接将显示为嵌入视图。',
             { mode: 'page', parentModel, index }
           );
           tryRemoveEmptyLine(model);
@@ -368,7 +368,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
           await toggleEmbedCardCreateModal(
             rootElement.host,
             'GitHub',
-            'The added GitHub issue or pull request link will be displayed as a card view.',
+            '添加的 GitHub 问题或拉取请求链接将显示为卡片视图。',
             { mode: 'page', parentModel, index }
           );
           tryRemoveEmptyLine(model);
@@ -392,7 +392,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
           await toggleEmbedCardCreateModal(
             rootElement.host,
             'Loom',
-            'The added Loom video link will be displayed as an embed view.',
+            '添加的 Loom 视频链接将显示为嵌入视图。',
             { mode: 'page', parentModel, index }
           );
           tryRemoveEmptyLine(model);
@@ -401,10 +401,10 @@ export const menuGroups: SlashMenuOptions['menus'] = [
     ],
   },
   {
-    name: 'Date & Time',
+    name: '日期 & 时间',
     items: [
       {
-        name: 'Today',
+        name: '今天',
         icon: TodayIcon,
         action: ({ rootElement, model }) => {
           const date = new Date();
@@ -412,7 +412,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       {
-        name: 'Tomorrow',
+        name: '明天',
         icon: TomorrowIcon,
         action: ({ rootElement, model }) => {
           // yyyy-mm-dd
@@ -422,7 +422,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       {
-        name: 'Yesterday',
+        name: '昨天',
         icon: YesterdayIcon,
         action: ({ rootElement, model }) => {
           const date = new Date();
@@ -431,7 +431,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       {
-        name: 'Now',
+        name: '现在',
         icon: NowIcon,
         action: ({ rootElement, model }) => {
           // For example 7:13 pm
@@ -449,10 +449,10 @@ export const menuGroups: SlashMenuOptions['menus'] = [
     ],
   },
   {
-    name: 'Database',
+    name: '数据库',
     items: [
       {
-        name: 'Table View',
+        name: '表格视图',
         alias: ['database'],
         icon: DatabaseTableViewIcon20,
         showWhen: model => {
@@ -482,7 +482,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       {
-        name: 'Kanban View',
+        name: '看板视图',
         alias: ['database'],
         disabled: false,
         icon: DatabaseKanbanViewIcon20,
@@ -606,10 +606,10 @@ export const menuGroups: SlashMenuOptions['menus'] = [
     },
   },
   {
-    name: 'Actions',
+    name: '操作',
     items: [
       {
-        name: 'Move Up',
+        name: '向上移动',
         icon: ArrowUpBigIcon,
         action: ({ rootElement, model }) => {
           const doc = rootElement.doc;
@@ -623,7 +623,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       {
-        name: 'Move Down',
+        name: '向下移动',
         icon: ArrowDownBigIcon,
         action: ({ rootElement, model }) => {
           const doc = rootElement.doc;
@@ -637,7 +637,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       {
-        name: 'Copy',
+        name: '复制至剪切板',
         icon: CopyIcon,
         action: ({ rootElement, model }) => {
           const slice = Slice.fromModels(rootElement.std.doc, [model]);
@@ -653,7 +653,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       // {
-      //   name: 'Paste',
+      //   name: '粘贴',
       //   icon: PasteIcon,
       //   action: async ({ model }) => {
       //     const copiedText = await navigator.clipboard.readText();
@@ -662,7 +662,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
       //   },
       // },
       {
-        name: 'Duplicate',
+        name: '复制',
         icon: DuplicateIcon,
         action: ({ rootElement, model }) => {
           if (!model.text || !(model.text instanceof Text)) {
@@ -689,7 +689,7 @@ export const menuGroups: SlashMenuOptions['menus'] = [
         },
       },
       {
-        name: 'Delete',
+        name: '删除',
         alias: ['remove'],
         icon: DeleteIcon,
         action: ({ rootElement, model }) => {

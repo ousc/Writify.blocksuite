@@ -17,7 +17,7 @@ export const selectPureColumnConfig = columnManager.register<
   string,
   SelectColumnData
 >(selectColumnTypeName, {
-  name: 'Select',
+  name: '单标签',
   type: data => tTag.create({ tags: data.options }),
   defaultData: () => ({
     options: [],

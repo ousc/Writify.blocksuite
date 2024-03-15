@@ -161,7 +161,7 @@ export class DataViewHeaderToolsAddRow extends BaseTool {
       draggable="true"
       @click="${this._onAddNewRecord}"
     >
-      ${PlusIcon}<span>New Record</span>
+      ${PlusIcon}<span>创建行</span>
     </div>`;
   }
 }

@@ -101,7 +101,7 @@ export class EdgelessNoteMenu extends WithDisposable(LitElement) {
     return html`
       <edgeless-slide-menu .menuWidth=${NOTE_MENU_WIDTH}>
         <div class="menu-content">
-          <div class="button-group-label">Blocks</div>
+          <div class="button-group-label">块</div>
           <div class="button-group-container">
             ${repeat(
               NOTE_MENU_ITEMS,
@@ -127,7 +127,7 @@ export class EdgelessNoteMenu extends WithDisposable(LitElement) {
             <edgeless-tool-icon-button
               .activeMode=${'background'}
               .iconContainerPadding=${2}
-              .tooltip=${'Links'}
+              .tooltip=${'链接'}
               @click=${() =>
                 toggleEmbedCardCreateModal(
                   this.edgeless.host,
@@ -144,7 +144,7 @@ export class EdgelessNoteMenu extends WithDisposable(LitElement) {
             <edgeless-tool-icon-button
               .activeMode=${'background'}
               .iconContainerPadding=${2}
-              .tooltip=${'File'}
+              .tooltip=${'附件'}
               @click=${async () => {
                 const file = await openFileOrFiles();
                 if (!file) return;

@@ -17,14 +17,14 @@ export type NoteMenuItem = {
 
 // TODO: add image, bookmark, database blocks
 export const NOTE_MENU_ITEMS = BLOCKHUB_TEXT_ITEMS.concat(BLOCKHUB_LIST_ITEMS)
-  .filter(item => item.name !== 'Divider')
+  .filter(item => item.name !== '分割线')
   .map(item => {
     return {
       icon: item.icon,
       tooltip:
         item.type !== 'text'
-          ? item.tooltip.replace('Drag/Click to insert ', '')
-          : 'Text',
+          ? item.tooltip.replace('拖动/单击插入', '')
+          : '文本',
       childFlavour: item.flavour as NoteChildrenFlavour,
       childType: item.type,
     } as NoteMenuItem;

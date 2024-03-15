@@ -51,22 +51,22 @@ export class DatabaseBlockModel extends BlockModel<DatabaseBlockProps> {
     const ids = [nanoid(), nanoid(), nanoid()];
     const statusId = this.addColumn(
       'end',
-      selectPureColumnConfig.create('Status', {
+      selectPureColumnConfig.create('状态', {
         options: [
           {
             id: ids[0],
             color: getTagColor(),
-            value: 'TODO',
+            value: '未开始',
           },
           {
             id: ids[1],
             color: getTagColor(),
-            value: 'In Progress',
+            value: '进行中',
           },
           {
             id: ids[2],
             color: getTagColor(),
-            value: 'Done',
+            value: '已完成',
           },
         ],
       })
@@ -75,7 +75,7 @@ export class DatabaseBlockModel extends BlockModel<DatabaseBlockProps> {
       const rowId = this.doc.addBlock(
         'affine:paragraph',
         {
-          text: new this.doc.Text(`Task ${i + 1}`),
+          text: new this.doc.Text(`任务 ${i + 1}`),
         },
         this.id
       );

@@ -117,7 +117,7 @@ export class ZoomBarToggleButton extends WithDisposable(LitElement) {
       <div class="toggle-button" @pointerdown=${stopPropagation}>
         <edgeless-tool-icon-button
           class=${this._showPopper ? 'actived' : 'non-actived'}
-          .tooltip=${'Toggle Zoom Tool Bar'}
+          .tooltip=${'缩放工具栏'}
           .tipPosition=${'right'}
           .active=${this._showPopper}
           .arrow=${false}

@@ -11,7 +11,7 @@ declare global {
 export const textPureColumnConfig = columnManager.register<string>(
   textColumnTypeName,
   {
-    name: 'Plain-Text',
+    name: '文本',
     type: () => tString.create(),
     defaultData: () => ({}),
     cellToString: data => data ?? '',

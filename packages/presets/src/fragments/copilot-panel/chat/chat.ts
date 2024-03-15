@@ -348,7 +348,7 @@ export class CopilotChatPanel
               @keydown="${keydown}"
               autocomplete="off"
               data-1p-ignore
-              placeholder="Type here ask Copilot some thing..."
+              placeholder="输入并询问Copilot..."
               class="copilot-chat-panel-chat-input copilot-chat-prompt"
               style="resize: none;"
             ></textarea>

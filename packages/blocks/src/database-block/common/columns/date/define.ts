@@ -7,7 +7,7 @@ declare global {
   }
 }
 export const datePureColumnConfig = columnManager.register<number>('date', {
-  name: 'Date',
+  name: '日期',
   type: () => tDate.create(),
   defaultData: () => ({}),
   cellToString: data => data?.toString() ?? '',

@@ -440,45 +440,45 @@ export class QuickEdgelessMenu extends ShadowlessElement {
             </sl-dropdown>
 
             <!-- undo/redo group -->
-            <sl-button-group label="History">
+            <sl-button-group label="历史">
               <!-- undo -->
-              <sl-tooltip content="Undo" placement="bottom" hoist>
+              <sl-tooltip content="撤销" placement="bottom" hoist>
                 <sl-button
                   pill
                   size="small"
-                  content="Undo"
+                  content="撤销"
                   .disabled=${!this._canUndo}
                   @click=${() => {
                     this.doc.undo();
                   }}
                 >
-                  <sl-icon name="arrow-counterclockwise" label="Undo"></sl-icon>
+                  <sl-icon name="arrow-counterclockwise" label="撤销"></sl-icon>
                 </sl-button>
               </sl-tooltip>
               <!-- redo -->
-              <sl-tooltip content="Redo" placement="bottom" hoist>
+              <sl-tooltip content="重做" placement="bottom" hoist>
                 <sl-button
                   pill
                   size="small"
-                  content="Redo"
+                  content="重做"
                   .disabled=${!this._canRedo}
                   @click=${() => {
                     this.doc.redo();
                   }}
                 >
-                  <sl-icon name="arrow-clockwise" label="Redo"></sl-icon>
+                  <sl-icon name="arrow-clockwise" label="重做"></sl-icon>
                 </sl-button>
               </sl-tooltip>
             </sl-button-group>
 
-            <sl-tooltip content="Start Collaboration" placement="bottom" hoist>
+            <sl-tooltip content="开始协作" placement="bottom" hoist>
               <sl-button @click=${this._startCollaboration} size="small" circle>
-                <sl-icon name="people" label="Collaboration"></sl-icon>
+                <sl-icon name="people" label="协作"></sl-icon>
               </sl-button>
             </sl-tooltip>
-            <sl-tooltip content="Docs" placement="bottom" hoist>
+            <sl-tooltip content="文档列表" placement="bottom" hoist>
               <sl-button @click=${this._toggleDocsPanel} size="small" circle>
-                <sl-icon name="filetype-doc" label="Doc"></sl-icon>
+                <sl-icon name="filetype-doc" label="文档列表"></sl-icon>
               </sl-button>
             </sl-tooltip>
 
@@ -516,11 +516,11 @@ export class QuickEdgelessMenu extends ShadowlessElement {
           <div>
             <sl-button-group label="Mode" style="margin-right: 12px">
               <!-- switch to page -->
-              <sl-tooltip content="Page" placement="bottom" hoist>
+              <sl-tooltip content="文档模式" placement="bottom" hoist>
                 <sl-button
                   pill
                   size="small"
-                  content="Page"
+                  content="文档模式"
                   .disabled=${this.mode !== 'edgeless'}
                   @click=${this._switchEditorMode}
                 >
@@ -528,11 +528,11 @@ export class QuickEdgelessMenu extends ShadowlessElement {
                 </sl-button>
               </sl-tooltip>
               <!-- switch to edgeless -->
-              <sl-tooltip content="Edgeless" placement="bottom" hoist>
+              <sl-tooltip content="无界模式" placement="bottom" hoist>
                 <sl-button
                   pill
                   size="small"
-                  content="Edgeless"
+                  content="无界模式"
                   .disabled=${this.mode !== 'page'}
                   @click=${this._switchEditorMode}
                 >

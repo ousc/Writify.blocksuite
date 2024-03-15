@@ -217,7 +217,7 @@ export class EdgelessShapeToolButton extends EdgelessToolButton<
     return html`
       <edgeless-toolbar-button
         class="edgeless-shape-button"
-        .tooltip=${this._menu ? '' : getTooltipWithShortcut('Shape', 'S')}
+        .tooltip=${this._menu ? '' : getTooltipWithShortcut('形状', 'S')}
         .tooltipOffset=${5}
         .active=${active}
       >

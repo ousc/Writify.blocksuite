@@ -70,7 +70,7 @@ export class EdgelessTextToolButton extends EdgelessToolButton<
     return html`
       <edgeless-toolbar-button
         class="edgeless-text-button"
-        .tooltip=${this._menu ? '' : getTooltipWithShortcut('Text', 'T')}
+        .tooltip=${this._menu ? '' : getTooltipWithShortcut('文字', 'T')}
         .tooltipOffset=${15}
         .active=${active}
         .activeMode=${'background'}

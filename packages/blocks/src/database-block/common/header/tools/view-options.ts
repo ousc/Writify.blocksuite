@@ -109,7 +109,7 @@ export const popViewOptions = (
       items: [
         {
           type: 'action',
-          name: 'Properties',
+          name: '属性',
           icon: InfoIcon,
           postfix: ArrowRightSmallIcon,
           select: () => {
@@ -123,7 +123,7 @@ export const popViewOptions = (
         },
         {
           type: 'action',
-          name: 'Filter',
+          name: '筛选',
           icon: FilterIcon,
           postfix: ArrowRightSmallIcon,
           select: () => {
@@ -144,7 +144,7 @@ export const popViewOptions = (
         },
         {
           type: 'action',
-          name: 'Group',
+          name: '分组',
           icon: GroupingIcon,
           postfix: ArrowRightSmallIcon,
           select: () => {
@@ -158,7 +158,7 @@ export const popViewOptions = (
         },
         {
           type: 'action',
-          name: 'Duplicate',
+          name: '复制',
           icon: DuplicateIcon,
           select: () => {
             view.duplicateView();
@@ -170,7 +170,7 @@ export const popViewOptions = (
           children: () => [
             {
               type: 'action',
-              name: 'Delete View',
+              name: '删除视图',
               icon: DeleteIcon,
               select: () => {
                 view.deleteView();

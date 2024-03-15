@@ -87,7 +87,7 @@ export const getMenus: (ctx: {
 
   return [
     {
-      name: 'Link to Doc',
+      name: '链接到文档',
       styles: 'overflow-y: scroll; max-height: 224px;',
       items: filteredDocList.map(doc => ({
         key: doc.id,
@@ -102,11 +102,11 @@ export const getMenus: (ctx: {
       })),
     },
     {
-      name: 'New Doc',
+      name: '新文档',
       items: [
         {
           key: 'create',
-          name: `Create "${displayDocName}" doc`,
+          name: `创建 "${displayDocName}" 文档`,
           icon: NewDocIcon,
           action: () => {
             const docName = query;
@@ -122,7 +122,7 @@ export const getMenus: (ctx: {
         },
         {
           key: 'import',
-          name: 'Import',
+          name: '导入',
           icon: ImportIcon,
           action: () => {
             const onSuccess = (
@@ -133,7 +133,7 @@ export const getMenus: (ctx: {
             ) => {
               toast(
                 editorHost,
-                `Successfully imported ${options.importedCount} Doc${options.importedCount > 1 ? 's' : ''}.`
+                `成功导入${options.importedCount}篇文档。`
               );
               for (const docId of docIds) {
                 insertLinkedNode({

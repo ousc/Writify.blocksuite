@@ -154,7 +154,7 @@ export class TableGroup extends WithDisposable(ShadowlessElement) {
               data-test-id="affine-database-add-row-button"
               role="button"
             >
-              ${PlusIcon}<span>New Record</span>
+              ${PlusIcon}<span>创建行</span>
             </div>
           </div>`}
     `;

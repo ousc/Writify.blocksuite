@@ -90,7 +90,7 @@ export class DataViewHeaderToolsFilter extends BaseTool {
       @click="${this.addFilter}"
       class="affine-database-filter-button dv-icon-20"
     >
-      ${FilterIcon} Filter
+      ${FilterIcon} ${'筛选'}
     </div>`;
   }
 }

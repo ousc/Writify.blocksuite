@@ -30,7 +30,7 @@
 </script>
 
 <div class="sidebar">
-  <div class="header">All Docs</div>
+  <div class="header">所有文档</div>
   <div class="doc-list">
     {#each docs as doc}
       <!-- svelte-ignore a11y-click-events-have-key-events -->

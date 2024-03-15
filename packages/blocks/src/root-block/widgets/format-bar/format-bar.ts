@@ -450,12 +450,13 @@ export class AffineFormatBarWidget extends WidgetElement {
       keyof AffineTextAttributes,
       'color' | 'background' | 'reference'
     >;
+    name: string;
     action: InlineActionConfigItem['action'];
   }) {
-    const { key } = config;
+    const { key,  name } = config;
     return this.addInlineAction({
       id: key,
-      name: camelCaseToWords(key),
+      name: name,
       icon: config.icon,
       isActive: chain => {
         const [result] = chain.isTextStyleActive({ key }).run();

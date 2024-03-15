@@ -8,12 +8,12 @@ function getDebugMenu(page: Page) {
   const debugMenu = page.locator('debug-menu');
   return {
     debugMenu,
-    undoBtn: debugMenu.locator('sl-tooltip[content="Undo"]'),
-    redoBtn: debugMenu.locator('sl-tooltip[content="Redo"]'),
+    undoBtn: debugMenu.locator('sl-tooltip[content="撤销"]'),
+    redoBtn: debugMenu.locator('sl-tooltip[content="重做"]'),
 
     blockTypeButton: debugMenu.getByRole('button', { name: 'Block Type' }),
     testOperationsButton: debugMenu.getByRole('button', {
-      name: 'Test Operations',
+      name: '测试操作',
     }),
 
     pagesBtn: debugMenu.getByTestId('docs-button'),

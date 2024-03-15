@@ -296,7 +296,7 @@ export class DatabaseHeaderColumn extends WithDisposable(ShadowlessElement) {
         items: [
           {
             type: 'sub-menu',
-            name: 'Column Type',
+            name: '列类型',
             icon: TextIcon,
             hide: () => !this.column.updateType || this.column.type === 'title',
             options: {
@@ -323,7 +323,7 @@ export class DatabaseHeaderColumn extends WithDisposable(ShadowlessElement) {
           },
           {
             type: 'action',
-            name: 'Duplicate Column',
+            name: '复制列',
             icon: DatabaseDuplicate,
             hide: () => !this.column.duplicate || this.column.type === 'title',
             select: () => {
@@ -341,7 +341,7 @@ export class DatabaseHeaderColumn extends WithDisposable(ShadowlessElement) {
           },
           {
             type: 'action',
-            name: 'Insert Left Column',
+            name: '左侧插入列',
             icon: DatabaseInsertLeft,
             select: () => {
               this.tableViewManager.columnAdd({
@@ -361,7 +361,7 @@ export class DatabaseHeaderColumn extends WithDisposable(ShadowlessElement) {
           },
           {
             type: 'action',
-            name: 'Insert Right Column',
+            name: '右侧插入列',
             icon: DatabaseInsertRight,
             select: () => {
               this.tableViewManager.columnAdd({
@@ -381,7 +381,7 @@ export class DatabaseHeaderColumn extends WithDisposable(ShadowlessElement) {
           },
           {
             type: 'action',
-            name: 'Move Left',
+            name: '左移',
             icon: DatabaseMoveLeft,
             hide: () => this.column.isFirst,
             select: () => {
@@ -399,7 +399,7 @@ export class DatabaseHeaderColumn extends WithDisposable(ShadowlessElement) {
           },
           {
             type: 'action',
-            name: 'Move Right',
+            name: '右移',
             icon: DatabaseMoveRight,
             hide: () => this.column.isLast,
             select: () => {
@@ -417,11 +417,11 @@ export class DatabaseHeaderColumn extends WithDisposable(ShadowlessElement) {
           },
           {
             type: 'group',
-            name: 'operation',
+            name: '操作',
             children: () => [
               {
                 type: 'action',
-                name: 'Delete Column',
+                name: '删除列',
                 icon: DeleteIcon,
                 hide: () => !this.column.delete || this.column.type === 'title',
                 select: () => {
@@ -448,7 +448,7 @@ export class DatabaseHeaderColumn extends WithDisposable(ShadowlessElement) {
       options: {
         input: {
           search: true,
-          placeholder: 'Search',
+          placeholder: '搜索',
         },
         items: this.tableViewManager.allColumnConfig.map(config => {
           return {

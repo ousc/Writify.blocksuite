@@ -11,7 +11,7 @@ declare global {
 export const titlePureColumnConfig = columnManager.register<string>(
   titleColumnTypeName,
   {
-    name: 'Title',
+    name: '标题',
     type: () => tRichText.create(),
     defaultData: () => ({}),
     cellToString: data => data?.toString() ?? '',

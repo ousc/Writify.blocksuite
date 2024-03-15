@@ -18,7 +18,7 @@ export const multiSelectPureColumnConfig = columnManager.register<
   string[],
   SelectColumnData
 >(multiSelectColumnTypeName, {
-  name: 'Multi-select',
+  name: '多标签',
   type: data => tArray(tTag.create({ tags: data.options })),
   defaultData: () => ({
     options: [],

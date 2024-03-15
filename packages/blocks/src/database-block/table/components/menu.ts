@@ -38,7 +38,7 @@ export const popRowMenu = (
   popFilterableSimpleMenu(ele, [
     {
       type: 'action',
-      name: 'Expand Row',
+      name: '展开编辑行',
       icon: ExpandFullIcon,
       select: () => {
         openDetail(rootElement, rowId, selection);
@@ -72,7 +72,7 @@ export const popRowMenu = (
       children: () => [
         {
           type: 'action',
-          name: 'Insert Before',
+          name: '上方插入行',
           icon: html` <div
             style="transform: rotate(90deg);display:flex;align-items:center;"
           >
@@ -84,7 +84,7 @@ export const popRowMenu = (
         },
         {
           type: 'action',
-          name: 'Insert After',
+          name: '下方插入行',
           icon: html` <div
             style="transform: rotate(90deg);display:flex;align-items:center;"
           >
@@ -110,7 +110,7 @@ export const popRowMenu = (
       children: () => [
         {
           type: 'action',
-          name: 'Delete Row',
+          name: '删除行',
           class: 'delete-item',
           icon: DeleteIcon,
           select: () => {

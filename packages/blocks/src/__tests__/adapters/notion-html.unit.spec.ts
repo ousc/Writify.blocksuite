@@ -1199,7 +1199,7 @@ describe('notion html to snapshot', () => {
             <th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16"
                   style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0"
                   class="typesMultipleSelect">
-                </svg></span>Tags</th>
+                </svg></span>标签</th>
             <th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16"
                   style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0"
                   class="typesMultipleSelect">

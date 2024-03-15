@@ -17,16 +17,16 @@ import type { ParagraphService } from './paragraph-service.js';
 
 const getPlaceholder = (model: ParagraphBlockModel) => {
   if (model.type === 'text') {
-    return "Type '/' for commands";
+    return "输入'/'查看命令提示";
   }
 
   const placeholders = {
-    h1: 'Heading 1',
-    h2: 'Heading 2',
-    h3: 'Heading 3',
-    h4: 'Heading 4',
-    h5: 'Heading 5',
-    h6: 'Heading 6',
+    h1: '一级标题',
+    h2: '二级标题',
+    h3: '三级标题',
+    h4: '四级标题',
+    h5: '五级标题',
+    h6: '六级标题',
     quote: '',
   };
   return placeholders[model.type];

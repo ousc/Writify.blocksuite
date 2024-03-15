@@ -25,7 +25,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <div className="header">All Docs</div>
+      <div className="header">所有文档</div>
       <div className="doc-list">
         {docs.map(doc => (
           <div

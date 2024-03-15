@@ -7,7 +7,7 @@ declare global {
   }
 }
 export const linkPureColumnConfig = columnManager.register<string>('link', {
-  name: 'Link',
+  name: '链接',
   type: () => tString.create(),
   defaultData: () => ({}),
   cellToString: data => data?.toString() ?? '',

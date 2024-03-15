@@ -94,7 +94,7 @@ export class EdgelessBrushToolButton extends EdgelessToolButton<
     return html`
       <edgeless-toolbar-button
         class="edgeless-brush-button"
-        .tooltip=${this._menu ? '' : getTooltipWithShortcut('Pen', 'P')}
+        .tooltip=${this._menu ? '' : getTooltipWithShortcut('笔', 'P')}
         .tooltipOffset=${4}
         .active=${active}
         @click=${() => {

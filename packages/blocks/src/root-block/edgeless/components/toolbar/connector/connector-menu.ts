@@ -22,9 +22,9 @@ function ConnectorModeButtonGroup(
   mode: ConnectorMode,
   setConnectorMode: (props: Record<string, unknown>) => void
 ) {
-  const straightLineTooltip = getTooltipWithShortcut('Straight', 'L');
-  const orthogonalTooltip = getTooltipWithShortcut('Elbowed', 'X');
-  const curveTooltip = getTooltipWithShortcut('Curve', 'C');
+  const straightLineTooltip = getTooltipWithShortcut('直线', 'L');
+  const orthogonalTooltip = getTooltipWithShortcut('折线', 'X');
+  const curveTooltip = getTooltipWithShortcut('曲线', 'C');
   /**
    * There is little hacky on rendering tooltip.
    * We don't want either tooltip overlap the top button or tooltip on left.

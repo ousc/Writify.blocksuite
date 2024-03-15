@@ -500,7 +500,7 @@ export class EdgelessToolbar extends WithDisposable(LitElement) {
           class="transform-button"
           .disabled=${this._imageLoading}
           .activeMode=${'background'}
-          .tooltip=${'Image'}
+          .tooltip=${'图片'}
           .tooltipOffset=${12}
           @click=${() => this._addImages()}
         >
@@ -539,7 +539,7 @@ export class EdgelessToolbar extends WithDisposable(LitElement) {
 
         <edgeless-tool-icon-button
           class="edgeless-frame-navigator-button"
-          .tooltip=${'Present'}
+          .tooltip=${'演示'}
           .tooltipOffset=${17}
           .iconContainerPadding=${8}
           @click=${() => {

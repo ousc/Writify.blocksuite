@@ -18,7 +18,7 @@ declare global {
 export const richTextPureColumnConfig = columnManager.register<Text['yText']>(
   richTextColumnTypeName,
   {
-    name: 'Text',
+    name: '富文本',
     type: () => tRichText.create(),
     defaultData: () => ({}),
     cellToString: data => data?.toString() ?? '',

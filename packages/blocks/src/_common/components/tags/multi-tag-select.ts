@@ -370,7 +370,7 @@ export class MultiTagSelect extends WithDisposable(ShadowlessElement) {
           })}
           <input
             class="select-input"
-            placeholder="Type here..."
+            placeholder="请输入..."
             .value="${this.text}"
             @input="${this._onInput}"
             @keydown="${this._onInputKeydown}"
@@ -379,7 +379,7 @@ export class MultiTagSelect extends WithDisposable(ShadowlessElement) {
         </div>
         <div class="select-option-container">
           <div class="select-option-container-header">
-            Select tag or create one
+            选择或创建一个标签
           </div>
           ${repeat(
             this.filteredOptions,

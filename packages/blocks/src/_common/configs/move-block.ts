@@ -28,7 +28,7 @@ interface MoveBlockConfig {
 
 export const moveBlockConfigs: MoveBlockConfig[] = [
   {
-    name: 'Move Up',
+    name: '向上移动',
     hotkey: ['Mod-Alt-ArrowUp', 'Mod-Shift-ArrowUp'],
     action: blockElement => {
       const doc = blockElement.doc;
@@ -87,7 +87,7 @@ export const moveBlockConfigs: MoveBlockConfig[] = [
     },
   },
   {
-    name: 'Move Down',
+    name: '向下移动',
     hotkey: ['Mod-Alt-ArrowDown', 'Mod-Shift-ArrowDown'],
     action: blockElement => {
       const doc = blockElement.doc;

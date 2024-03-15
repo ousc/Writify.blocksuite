@@ -14,7 +14,7 @@ declare global {
 export const progressPureColumnConfig = columnManager.register<number>(
   progressColumnTypeName,
   {
-    name: 'Progress',
+    name: '进度条',
     type: () => tNumber.create(),
     defaultData: () => ({}),
     cellToString: data => data?.toString() ?? '',

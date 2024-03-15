@@ -25,7 +25,7 @@ export function Sidebar() {
 
   return (
     <div class="sidebar">
-      <div class="header">All Docs</div>
+      <div class="header">所有文档</div>
       <div class="doc-list">
         <For each={docs()}>
           {doc => (

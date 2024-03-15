@@ -71,7 +71,7 @@ export class DocsPanel extends WithDisposable(ShadowlessElement) {
     const collection = this.editor.doc.collection;
     const docs = [...collection.docs.values()];
     return html`
-      <div @click="${this.createDoc}" class="new-doc-button">New Doc</div>
+      <div @click="${this.createDoc}" class="new-doc-button">新文档</div>
       ${repeat(
         docs,
         v => v.id,
@@ -101,7 +101,7 @@ export class DocsPanel extends WithDisposable(ShadowlessElement) {
             this.requestUpdate();
           };
           return html`<div class="doc-item" @click="${click}" style="${style}">
-            ${doc.meta?.title || 'Untitled'}
+            ${doc.meta?.title || '未命名'}
             <div @click="${deleteDoc}" class="delete-doc-icon">
               ${CloseIcon}
             </div>

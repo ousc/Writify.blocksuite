@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <div class="header">All Docs</div>
+    <div class="header">所有文档</div>
     <div class="doc-list">
       <div
         v-for="doc in docs"

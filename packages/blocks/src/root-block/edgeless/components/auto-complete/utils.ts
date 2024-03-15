@@ -95,7 +95,7 @@ export class AutoCompleteTextOverlay extends AutoCompleteTargetOverlay {
     ctx.fillStyle = '#C0BFC1';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText("Type '/' to insert", x + w / 2, y + h / 2);
+    ctx.fillText("输入'/'插入", x + w / 2, y + h / 2);
   }
 }
 
@@ -123,7 +123,7 @@ export class AutoCompleteNoteOverlay extends AutoCompleteTargetOverlay {
     ctx.fillStyle = 'black';
     ctx.textAlign = 'left';
     ctx.textBaseline = 'middle';
-    ctx.fillText("Type '/' for command", x + 24, y + h / 2);
+    ctx.fillText("输入'/'查看命令提示", x + 24, y + h / 2);
   }
 }
 

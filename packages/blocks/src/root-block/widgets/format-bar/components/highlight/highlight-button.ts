@@ -55,7 +55,7 @@ const HighlightPanel = (
 ) => {
   return html`<div ${ref(containerRef)} class="highlight-panel">
     <!-- Text Color Highlight -->
-    <div class="highligh-panel-heading">Color</div>
+    <div class="highligh-panel-heading">字体颜色</div>
     ${foregroundConfig.map(
       ({ name, color }) =>
         html`<icon-button
@@ -76,7 +76,7 @@ const HighlightPanel = (
     )}
 
     <!-- Text Background Highlight -->
-    <div class="highligh-panel-heading">Background</div>
+    <div class="highligh-panel-heading">背景颜色</div>
     ${backgroundConfig.map(
       ({ name, color }) =>
         html`<icon-button

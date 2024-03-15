@@ -28,7 +28,7 @@ export interface QuickActionConfig {
 export const quickActionConfig: QuickActionConfig[] = [
   {
     id: 'copy',
-    name: 'Copy',
+    name: '复制',
     disabledToolTip: undefined,
     icon: CopyIcon,
     hotkey: undefined,
@@ -49,7 +49,7 @@ export const quickActionConfig: QuickActionConfig[] = [
   },
   {
     id: 'convert-to-database',
-    name: 'Group as Database',
+    name: '组织为数据库',
     disabledToolTip:
       'Contains Block types that cannot be converted to Database',
     icon: DatabaseTableViewIcon20,
@@ -95,7 +95,7 @@ export const quickActionConfig: QuickActionConfig[] = [
   },
   {
     id: 'convert-to-linked-doc',
-    name: 'Create Linked Doc',
+    name: '创建链接文档',
     icon: FontLinkedDocIcon,
     hotkey: `Mod-Shift-l`,
     showWhen: host => {

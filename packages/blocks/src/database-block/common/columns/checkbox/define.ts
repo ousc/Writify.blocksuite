@@ -10,7 +10,7 @@ declare global {
 export const checkboxPureColumnConfig = columnManager.register<boolean>(
   'checkbox',
   {
-    name: 'Checkbox',
+    name: '复选框',
     type: () => tBoolean.create(),
     defaultData: () => ({}),
     cellToString: data => (data ? 'True' : 'False'),

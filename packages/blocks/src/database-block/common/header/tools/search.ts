@@ -166,7 +166,7 @@ export class DataViewHeaderToolsSearch extends BaseTool<
           ${DatabaseSearchIcon}
         </div>
         <input
-          placeholder="Search..."
+          placeholder="搜索..."
           class="affine-database-search-input"
           @input="${this._onSearch}"
           @click="${(event: MouseEvent) => event.stopPropagation()}"

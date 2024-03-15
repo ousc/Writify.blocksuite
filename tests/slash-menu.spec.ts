@@ -703,10 +703,10 @@ test.describe('slash menu with customize menu', () => {
           ...SlashMenuWidget.DEFAULT_OPTIONS,
           menus: [
             {
-              name: 'Custom Menu',
+              name: '自定义菜单',
               items: [
                 {
-                  name: 'Custom Menu Item',
+                  name: '自定义菜单项',
                   groupName: 'Custom Menu',
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   icon: '' as any,

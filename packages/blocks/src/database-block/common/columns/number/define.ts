@@ -17,7 +17,7 @@ export const numberPureColumnConfig = columnManager.register<
     decimal: number;
   }
 >(numberColumnTypeName, {
-  name: 'Number',
+  name: '数值',
   type: () => tNumber.create(),
   defaultData: () => ({ decimal: 0 }),
   cellToString: data => data?.toString() ?? '',

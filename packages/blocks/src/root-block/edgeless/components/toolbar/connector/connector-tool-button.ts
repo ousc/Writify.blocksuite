@@ -93,9 +93,9 @@ export class EdgelessConnectorToolButton extends EdgelessToolButton<
         .tooltip=${this._menu
           ? ''
           : html`<div>
-              ${getTooltipWithShortcut('Straight ', 'L')}
-              ${getTooltipWithShortcut('Elbowed', 'X', '(Default)')}
-              ${getTooltipWithShortcut('Curve    ', 'C')}
+              ${getTooltipWithShortcut('直线 ', 'L')}
+              ${getTooltipWithShortcut('折线', 'X', '(默认)')}
+              ${getTooltipWithShortcut('曲线    ', 'C')}
             </div> `}
         .tooltipOffset=${17}
         .active=${active}

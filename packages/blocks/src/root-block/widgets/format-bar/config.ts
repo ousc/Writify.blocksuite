@@ -89,31 +89,37 @@ export function toolbarDefaultConfig(toolbar: AffineFormatBarWidget) {
     .addDivider()
     .addTextStyleToggle({
       key: 'bold',
+      name: '加粗',
       action: chain => chain.toggleBold().run(),
       icon: BoldIcon,
     })
     .addTextStyleToggle({
       key: 'italic',
+      name: '斜体',
       action: chain => chain.toggleItalic().run(),
       icon: ItalicIcon,
     })
     .addTextStyleToggle({
       key: 'underline',
+      name: '下划线',
       action: chain => chain.toggleUnderline().run(),
       icon: UnderlineIcon,
     })
     .addTextStyleToggle({
       key: 'strike',
+      name: '删除线',
       action: chain => chain.toggleStrike().run(),
       icon: StrikethroughIcon,
     })
     .addTextStyleToggle({
       key: 'code',
+      name: '代码',
       action: chain => chain.toggleCode().run(),
       icon: CodeIcon,
     })
     .addTextStyleToggle({
       key: 'link',
+      name: '链接',
       action: chain => chain.toggleLink().run(),
       icon: LinkIcon,
     })
@@ -122,7 +128,7 @@ export function toolbarDefaultConfig(toolbar: AffineFormatBarWidget) {
     .addDivider()
     .addInlineAction({
       id: 'copy',
-      name: 'Copy',
+      name: '复制',
       icon: CopyIcon,
       isActive: () => false,
       action: chain => {
@@ -140,7 +146,7 @@ export function toolbarDefaultConfig(toolbar: AffineFormatBarWidget) {
     })
     .addInlineAction({
       id: 'convert-to-database',
-      name: 'Group as Database',
+      name: '组织为数据库',
       icon: DatabaseTableViewIcon20,
       isActive: () => false,
       action: () => {
@@ -166,7 +172,7 @@ export function toolbarDefaultConfig(toolbar: AffineFormatBarWidget) {
     })
     .addInlineAction({
       id: 'convert-to-linked-doc',
-      name: 'Create Linked Doc',
+      name: '创建链接文档',
       icon: FontLinkedDocIcon,
       isActive: () => false,
       action: (chain, formatBar) => {
@@ -252,72 +258,72 @@ export function toolbarDefaultConfig(toolbar: AffineFormatBarWidget) {
     .addBlockTypeSwitch({
       flavour: 'affine:paragraph',
       type: 'text',
-      name: 'Text',
+      name: '正文',
       icon: TextIcon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:paragraph',
       type: 'h1',
-      name: 'Heading 1',
+      name: '一级标题',
       icon: Heading1Icon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:paragraph',
       type: 'h2',
-      name: 'Heading 2',
+      name: '二级标题',
       icon: Heading2Icon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:paragraph',
       type: 'h3',
-      name: 'Heading 3',
+      name: '三级标题',
       icon: Heading3Icon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:paragraph',
       type: 'h4',
-      name: 'Heading 4',
+      name: '四级标题',
       icon: Heading4Icon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:paragraph',
       type: 'h5',
-      name: 'Heading 5',
+      name: '五级标题',
       icon: Heading5Icon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:paragraph',
       type: 'h6',
-      name: 'Heading 6',
+      name: '六级标题',
       icon: Heading6Icon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:list',
       type: 'bulleted',
-      name: 'Bulleted List',
+      name: '无序列表',
       icon: BulletedListIcon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:list',
       type: 'numbered',
-      name: 'Numbered List',
+      name: '有序列表',
       icon: NumberedListIcon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:list',
       type: 'todo',
-      name: 'To-do List',
+      name: '任务列表',
       icon: CheckBoxIcon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:code',
-      name: 'Code Block',
+      name: '代码块',
       icon: CodeIcon,
     })
     .addBlockTypeSwitch({
       flavour: 'affine:paragraph',
       type: 'quote',
-      name: 'Quote',
+      name: '引用',
       icon: QuoteIcon,
     });
 }

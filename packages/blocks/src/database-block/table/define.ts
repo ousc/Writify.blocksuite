@@ -25,7 +25,7 @@ export type TableViewData = {
   };
 };
 viewManager.register('table', {
-  defaultName: 'Table View',
+  defaultName: '表格视图',
   init(model, id, name) {
     return {
       id,

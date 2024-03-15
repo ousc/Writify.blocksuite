@@ -41,9 +41,9 @@ export function ConfigRenderer(formatBar: AffineFormatBarWidget) {
             data-testid=${item.id}
             ?active=${item.isActive(formatBar.std.command.chain(), formatBar)}
             @click=${() => {
-              item.action(formatBar.std.command.chain(), formatBar);
-              formatBar.requestUpdate();
-            }}
+            item.action(formatBar.std.command.chain(), formatBar);
+            formatBar.requestUpdate();
+          }}
           >
             ${typeof item.icon === 'function' ? item.icon() : item.icon}
             <affine-tooltip>${item.name}</affine-tooltip>

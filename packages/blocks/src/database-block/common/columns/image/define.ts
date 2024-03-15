@@ -11,7 +11,7 @@ declare global {
 export const imagePureColumnConfig = columnManager.register<string>(
   ImageColumnTypeName,
   {
-    name: 'image',
+    name: '图片',
     type: () => tImage.create(),
     defaultData: () => ({}),
     cellToString: data => data ?? '',
